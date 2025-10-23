@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Management System - View All Students">
+    <meta name="author" content="Battini Nikhileswar">
+    <title>View Students - Student Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Student Management</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="student-form.html"><i class="fas fa-user-plus"></i> Add Student</a></li>
+                <li><a href="view-students.html" class="active"><i class="fas fa-users"></i> View Students</a></li>
+                <li><a href="#"><i class="fas fa-chart-bar"></i> Reports</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-dropdown">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Admin</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <a href="login.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-users"></i> View All Students</h1>
+                <p>Browse and manage student records</p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="search-filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search by name, ID, or email...">
+                </div>
+                <div class="filter-group">
+                    <select id="courseFilter" class="filter-select">
+                        <option value="">All Courses</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="mtech">M.Tech</option>
+                        <option value="bca">BCA</option>
+                        <option value="mca">MCA</option>
+                    </select>
+                    <select id="departmentFilter" class="filter-select">
+                        <option value="">All Departments</option>
+                        <option value="cse">Computer Science</option>
+                        <option value="ece">Electronics</option>
+                        <option value="mech">Mechanical</option>
+                    </select>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="table-container">
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Course</th>
+                            <th>Department</th>
+                            <th>Semester</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>STU001</td>
+                            <td>
+                                <div class="student-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>John Doe</span>
+                                </div>
+                            </td>
+                            <td>john.doe@example.com</td>
+                            <td>+91 9876543210</td>
+                            <td>B.Tech</td>
+                            <td>Computer Science</td>
+                            <td>5</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td class="action-btns">
+                                <button class="btn-icon btn-view" title="View"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STU002</td>
+                            <td>
+                                <div class="student-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Jane Smith</span>
+                                </div>
+                            </td>
+                            <td>jane.smith@example.com</td>
+                            <td>+91 9876543211</td>
+                            <td>MCA</td>
+                            <td>Computer Science</td>
+                            <td>3</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td class="action-btns">
+                                <button class="btn-icon btn-view" title="View"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STU003</td>
+                            <td>
+                                <div class="student-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Mike Johnson</span>
+                                </div>
+                            </td>
+                            <td>mike.j@example.com</td>
+                            <td>+91 9876543212</td>
+                            <td>B.Tech</td>
+                            <td>Mechanical</td>
+                            <td>7</td>
+                            <td><span class="badge badge-warning">Inactive</span></td>
+                            <td class="action-btns">
+                                <button class="btn-icon btn-view" title="View"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STU004</td>
+                            <td>
+                                <div class="student-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Sarah Williams</span>
+                                </div>
+                            </td>
+                            <td>sarah.w@example.com</td>
+                            <td>+91 9876543213</td>
+                            <td>M.Tech</td>
+                            <td>Electronics</td>
+                            <td>2</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td class="action-btns">
+                                <button class="btn-icon btn-view" title="View"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STU005</td>
+                            <td>
+                                <div class="student-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>David Brown</span>
+                                </div>
+                            </td>
+                            <td>david.b@example.com</td>
+                            <td>+91 9876543214</td>
+                            <td>B.Tech</td>
+                            <td>Computer Science</td>
+                            <td>6</td>
+                            <td><span class="badge badge-info">Graduated</span></td>
+                            <td class="action-btns">
+                                <button class="btn-icon btn-view" title="View"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="btn-pagination" disabled>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="page-numbers">
+                    <button class="page-num active">1</button>
+                    <button class="page-num">2</button>
+                    <button class="page-num">3</button>
+                    <button class="page-num">4</button>
+                    <button class="page-num">5</button>
+                </div>
+                <button class="btn-pagination">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Student Management System. Developed by Battini Nikhileswar</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Management System - Home Dashboard">
+    <meta name="author" content="Battini Nikhileswar">
+    <title>Home - Student Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Student Management</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="student-form.html"><i class="fas fa-user-plus"></i> Add Student</a></li>
+                <li><a href="view-students.html"><i class="fas fa-users"></i> View Students</a></li>
+                <li><a href="#"><i class="fas fa-chart-bar"></i> Reports</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-dropdown">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Admin</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <a href="login.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h1>Welcome to Student Management System</h1>
+                <p>Manage your students efficiently and effectively</p>
+            </section>
+
+            <!-- Statistics Cards -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card stat-primary">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Students</h3>
+                            <p class="stat-number">1,234</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card stat-success">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Active Students</h3>
+                            <p class="stat-number">1,180</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card stat-warning">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Graduated</h3>
+                            <p class="stat-number">450</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card stat-info">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Courses</h3>
+                            <p class="stat-number">45</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-grid">
+                    <a href="student-form.html" class="action-card">
+                        <i class="fas fa-user-plus"></i>
+                        <h3>Add New Student</h3>
+                        <p>Register a new student to the system</p>
+                    </a>
+
+                    <a href="view-students.html" class="action-card">
+                        <i class="fas fa-list"></i>
+                        <h3>View All Students</h3>
+                        <p>Browse and manage student records</p>
+                    </a>
+
+                    <a href="#" class="action-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Search Student</h3>
+                        <p>Find student by name or ID</p>
+                    </a>
+
+                    <a href="#" class="action-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Generate Report</h3>
+                        <p>Create student performance reports</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p><strong>New student added:</strong> John Doe</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p><strong>Student record updated:</strong> Jane Smith</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p><strong>Student record deleted:</strong> Mike Johnson</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Student Management System. Developed by Battini Nikhileswar</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
